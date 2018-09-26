@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.com/Magystius/Omega.svg?branch=master)](https://travis-ci.com/Magystius/Omega)
+[![License](https://img.shields.io/github/license/magystius/omega.svg)](https://github.com/magystius/omega/blob/master/LICENSE.md)
+[![Docker Stars](https://img.shields.io/docker/stars/tdekarz/omega.svg)](https://hub.docker.com/r/tdekarz/omega/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tdekarz/omega.svg)](https://hub.docker.com/r/tdekarz/omega/)
+
+
 # Ωmega
 
 simple proof-of-concept web-app for container runtime environments.

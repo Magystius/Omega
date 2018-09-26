@@ -1,0 +1,32 @@
+{
+  "name": "omega",
+  "version": "0.0.1",
+  "description": "simple proof-of-concept web-app for container runtime environments",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magystius/omega.git"
+  },
+  "keywords": [
+    "omega",
+    "express",
+    "node"
+  ],
+  "author": "Tim Dekarz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Magystius/omega/issues"
+  },
+  "homepage": "https://github.com/Magystius/omega#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}

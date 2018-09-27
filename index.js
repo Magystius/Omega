@@ -1,8 +1,10 @@
-const express = require('express')
-const logger = require('morgan')
+const http = require('http')
 
-const app = express()
+const server = http.createServer((req, res) => {
+  console.log(`${new Date().toUTCString()} ${req.method} ${req.url}`)
+  res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+  res.end('αlpha')
+})
 
-app.use(logger('dev'))
-app.get('/*', (req, res) => res.send('αlpha'))
-app.listen(8080, () => console.log('server started and listening...'))
+server.listen(8080)
+console.log('server started and listening...')

@@ -9,7 +9,6 @@ sudo: required
 services:
   - docker
 script:
-  - npm ci
   - docker build -t tdekarz/omega:latest .
 deploy:
   provider: script

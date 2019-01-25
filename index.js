@@ -2,15 +2,20 @@ const http = require('http')
 const https = require('https')
 
 const connectionCheck = (req, res) => {
-  https.get('https://www.google.com/search?q=omega', checkRes => {
-    if (checkRes.statusCode === 200) {
-      console.log('connection check successful')
-      res.end('internet reachable')
-    } else {
-      console.log(`connection check NOT successful => ${checkRes.statusCode}`)
-      res.end('internet NOT reachable')
-    }
-  })
+  try {
+    https.get('https://www.google.com/search?q=omega', checkRes => {
+      if (checkRes.statusCode === 200) {
+        console.log('connection check successful')
+        res.end('internet reachable')
+      } else {
+        console.log(`connection check NOT successful => ${checkRes.statusCode}`)
+        res.end('internet NOT reachable')
+      }
+    })
+  } catch (error) {
+    console.log('connection check NOT successful => timeout')
+    res.end('internet NOT reachable')
+  }
 }
 
 const server = http.createServer((req, res) => {

@@ -26,6 +26,8 @@ const server = http.createServer((req, res) => {
   //dispatch incoming request to handling extra action
   if (req.url === '/connection-check') {
     connectionCheck(req, res)
+  } else if(req.url === '/health') {
+    res.end('OK')
   } else {
     res.end('αlpha')
   }
